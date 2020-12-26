@@ -4,7 +4,10 @@
 
 - Get node (for example version 12.9.1 or higher)
 - Fork / Clone project
-- Browse to the folder & cmd: "npm start"
+- Browse to the folder "nameapp" & 
+- cmd/Terminal:
+    - npm install
+    - npm start
 - Project should open to localhost:3000
 
 ## Task
