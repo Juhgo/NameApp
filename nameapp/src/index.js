@@ -86,6 +86,16 @@ const App = () => {
     textDecoration: "underline"
   }
 
+  const sortByName = () => {
+    setListState(sortedByName)
+    setSortedBy(false)
+  }
+
+  const sortByNumber = () => {
+    setListState(sortedByNumber)
+    setSortedBy(true)
+  }
+
   // Use sort() method to sort by Amount.
   const sortedByNumber = [].concat(names)
     .sort((a, b) => b.amount - a.amount);
@@ -114,8 +124,8 @@ const App = () => {
       <table>
         <thead>
           <tr>
-            <th type="button" style={sortedBy ? console.log("Sorted by Amount") : Styles} onClick={() => { setListState(sortedByName); setSortedBy(false) }}>Name</th>
-            <th type="button" style={sortedBy ? Styles : console.log("Sorted by Name")} onClick={() => { setListState(sortedByNumber); setSortedBy(true) }}>Amount</th>
+            <th type="button" style={sortedBy ? console.log("Sorted by Amount") : Styles} onClick={sortByName}>Name</th>
+            <th type="button" style={sortedBy ? Styles : console.log("Sorted by Name")} onClick={sortByNumber}>Amount</th>
           </tr>
         </thead>
       </table>
